@@ -1,0 +1,86 @@
+body {
+	margin-left: 2%;
+	margin-right: 2%;
+	background-color: rgba(220, 220, 220, 1);
+ }
+ 
+ header {
+	 color: rgba(200, 150, 150, 1);
+	 background-color: rgba(150, 150, 150, 1);
+ }
+ 
+ #intro {
+	 text-align: left;
+	 background-color: rgba(20, 200, 200, 1);
+	 padding: 10px;
+ }
+ 
+ #about-us {
+	 text-align: center;
+	 background-color: rgba(200, 150, 100, 1);
+	 padding: 10px;
+ }
+ 
+ #about-us #grey-patch {
+	 margin-left: auto;
+	 margin-right: 10%;
+	 width: 50%;
+ }
+ 
+ #about-us #contact {
+	 text-align: center;
+	 background-color: rgba(0, 150, 100, 1);
+ }
+
+ #about-us #intro-picture {
+	 text-align: center;
+	 background-color: rgba(150, 150, 150, 1);
+ }
+ 
+ #about-us #intro-picture img {
+	width: 200px;
+    height: 300px;
+	object-fit: cover;
+ }
+ 
+ #booking {
+	 text-align: center;
+	 background-color: rgba(20, 190, 100, 1);
+ }
+ 
+ #booking #booking-form {
+	 text-align: center;
+	 background-color: rgba(0, 200, 0, 1);
+ }
+ 
+ #specialties {
+	 text-align: center;
+	 background-color: rgba(200, 250, 70, 1);
+ }
+ 
+ #specialties ul {
+	display: inline-block;
+	list-style: none;
+ }
+ 
+ #specialties ul > li {
+	 padding: 20px;
+ }
+
+ #specialties img {
+	 padding: none;
+	 width: 100px;
+	 height: auto;
+ }
+ 
+ #menu {
+	 text-align: center;
+	 background-color: rgba(200, 100, 70, 1);
+ }
+ 
+ #menu table {
+	 margin-left: auto;
+	 margin-right: auto;
+	 text-align: left;
+	 background-color: rgba(200, 100, 70, 1);
+ }
