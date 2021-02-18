@@ -23,9 +23,18 @@ header::after {
 	margin-top: 40px;
 }
 
-h1 > a{
+@font-face {
+	font-family: "Gang of Three";
+	src: url("go3v2.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1 > a {
 	text-decoration: none;
-	font-family: 'Kaushan Script', cursive;
+	font-family: "Gang of Three";
+	font-weight: normal;
+	line-height: 1.2;
 	color: white;
 	font-size: 36px;
 }
@@ -186,7 +195,7 @@ nav > a {
  }
 
  #specialties img {
-	 padding: none;
+	 padding: 0px;
 	 width: 100px;
 	 height: auto;
  }
