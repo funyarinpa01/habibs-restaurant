@@ -1,66 +1,182 @@
-body {
-	margin-left: 2%;
-	margin-right: 2%;
-	background-color: rgba(220, 220, 220, 1);
- }
+
+/* Header styles */
+section, header {
+	padding: 25%;
+}
+
+
+header {
+	position: relative;
+	background-color: rgb(100, 98, 98);
+	padding-top: 10px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header::after {
+	position: absolute;
+	content: "";
+	width: 50%;
+	border-bottom: 1px rgb(241, 238, 238) solid;
+	margin-top: 40px;
+}
+
+h1 > a{
+	text-decoration: none;
+	font-family: 'Kaushan Script', cursive;
+	color: white;
+	font-size: 36px;
+}
+
+nav > a {
+	margin-right: 8px;
+	text-decoration: none;
+	color: rgb(241, 238, 238);
+	opacity: 0.9;
+	transition: all .4s ease;
+}
+
+ nav > a:hover {
+	opacity: 1;
+	color: rgb(36, 33, 33);
+}
  
- header {
-	 color: rgba(200, 150, 150, 1);
-	 background-color: rgba(150, 150, 150, 1);
- }
- 
- #intro {
-	 text-align: left;
-	 background-color: rgba(20, 200, 200, 1);
-	 padding: 10px;
- }
- 
- #about-us {
-	 text-align: center;
-	 background-color: rgba(200, 150, 100, 1);
-	 padding: 10px;
- }
- 
- #about-us #grey-patch {
-	 margin-left: auto;
-	 margin-right: 10%;
-	 width: 50%;
- }
- 
- #about-us #contact {
-	 text-align: center;
-	 background-color: rgba(0, 150, 100, 1);
+
+ /* Intro section */
+#intro {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: rgb(100, 98, 98);
  }
 
- #about-us #intro-picture {
-	 text-align: center;
-	 background-color: rgba(150, 150, 150, 1);
+#intro > div {
+	padding-left: 40%;
+}
+
+#intro > h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 35px;
+	color: rgba(245, 175, 71, 0.8);
+	margin: 5% 0;
+}
+
+#intro > h3 {
+	color: rgb(241, 238, 238);
+	font-size: 20px;
+
+}
+
+#intro > h4 {
+	margin-top: 5%;
+	color: rgb(36, 33, 33);
+}
+
+
+ /* About us */
+ 
+ #about-us {
+	 padding-top: 50px;
+	 padding-bottom: 50px;
+	 display: flex;
+	 justify-content: space-between;
  }
  
- #about-us #intro-picture img {
-	width: 200px;
-    height: 300px;
-	object-fit: cover;
+ #about-us h2 {
+	 color: rgba(245, 175, 71, 0.8);
+ }
+
+ .about-l {
+	 width: 70%;
+	 padding-top: 15%;
+ }
+
+ .about-l h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 35px;
+	text-align: center;
+ }
+
+ .about-l > p {
+	 color: rgb(36, 33, 33);
+	 margin: 15px 0;
+	 text-align: center;
  }
  
- #booking {
-	 text-align: center;
-	 background-color: rgba(20, 190, 100, 1);
+.about-r {
+	margin-left: 25px;
+}
+
+ .contact {
+	position: relative;
+	bottom: 30%;
+	background-color: rgb(20, 5, 44);
+	padding: 10px;
  }
+
+ .contact h2, h3{
+	margin: 8px 0;
+ }
+
+ .contact > h2 {
+	font-size: 20px;
+ }
+
+ .contact > h3 {
+	font-size: 16px;
+}
+
+.contact h3, p {
+	color: rgb(241, 238, 238);
+}
+
+.contact p {
+	margin-top: 5px;
+	font-size: 10px;
+}
  
- #booking #booking-form {
-	 text-align: center;
-	 background-color: rgba(0, 200, 0, 1);
+.grey-patch{
+	height: 200px;
+	background-color: rgb(45, 44, 58);
  }
+
+.view-map {
+	color: rgba(245, 175, 71, 0.8);
+}
+
+.reservation-ref {
+	cursor: pointer;
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin: 15px 30px;
+	padding: 10px 15px;
+	border: 1px solid rgba(245, 175, 71, 0.8);
+	color: rgb(241, 238, 238);
+	opacity: 0.9;
+	transition: all 0.2s linear;
+}
+
+.reservation-ref:hover {
+	background-color: rgba(245, 175, 71, 0.8);
+	opacity: 1;
+	color: rgb(241, 238, 238);
+}
+ 
+/* Booking */
+ 
+
  
  #specialties {
-	 text-align: center;
-	 background-color: rgba(200, 250, 70, 1);
- }
+	 padding-top: 50px;
+	 padding-bottom: 50px;
+	 background-color: rgb(100, 98, 98);
+}
  
  #specialties ul {
-	display: inline-block;
-	list-style: none;
+	display: flex;
+	justify-content: space-between;
  }
  
  #specialties ul > li {
@@ -74,9 +190,10 @@ body {
  }
  
  #menu {
-	 text-align: center;
-	 background-color: rgba(200, 100, 70, 1);
- }
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgb(20, 5, 44);
+}
  
  #menu table {
 	 margin-left: auto;
@@ -84,3 +201,13 @@ body {
 	 text-align: left;
 	 background-color: rgba(200, 100, 70, 1);
  }
+
+ #booking {
+	text-align: center;
+	background-color: rgba(20, 190, 100, 1);
+}
+
+#booking #booking-form {
+	text-align: center;
+	background-color: rgba(0, 200, 0, 1);
+}
