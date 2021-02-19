@@ -198,7 +198,6 @@ nav > a {
 	justify-content: space-between;
  }
  
- /* Not done yet */
  #specialties a{
 	display: block;
 	margin-left: 20px;
@@ -225,18 +224,64 @@ nav > a {
 	color: rgb(194, 99, 99);
  }
  
+
+ /* Menu */
  #menu {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: rgb(20, 5, 44);
+	text-align: center;
 }
  
+#menu > h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 35px;
+	color: rgba(200, 100, 70, 1);
+}
+
+#menu > p {
+	margin: 30px 0;
+	color: rgb(241, 238, 238);
+}
+
+#menu > button {
+	border: none;
+	margin: 30px auto;
+}
+
  #menu table {
-	 margin-left: auto;
-	 margin-right: auto;
-	 text-align: left;
-	 background-color: rgba(200, 100, 70, 1);
+	border: 1px solid rgb(241, 238, 238);
  }
+
+.course-type h3 {
+	color: rgba(200, 100, 70, 1);
+	font-size: 25px;
+	margin: 30px 0;
+}
+
+.course-type h3::after, .course-type h3::before {
+	content: "......";
+}
+
+.description > div{
+	display: flex;
+}
+
+.menu-ref {
+	cursor: pointer;
+	padding: 10px 25px;
+	background-color: rgba(200, 100, 70, 1);
+	color: rgb(36, 33, 33);
+	transition: all .2s linear;
+	opacity: 0.9;
+}
+
+.menu-ref:hover {
+	opacity: 1;
+	background-color: rgb(241, 238, 238);
+	color:rgba(200, 100, 70, 1);
+}
+
 
  #booking {
 	text-align: center;
