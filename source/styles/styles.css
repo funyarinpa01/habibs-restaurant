@@ -5,7 +5,7 @@
 	font-style: normal;
 }
 
-section, header {
+section, header, footer {
 	padding: 25%;
 }
 
@@ -122,7 +122,7 @@ nav > a {
 	padding: 10px;
  }
 
- .contact h2, h3{
+ .contact h2, .contact h3{
 	margin: 8px 0;
  }
 
@@ -134,7 +134,7 @@ nav > a {
 	font-size: 16px;
 }
 
-.contact h3, p {
+.contact h3, .contact p {
 	color: rgb(241, 238, 238);
 }
 
@@ -152,13 +152,18 @@ nav > a {
 	color: rgba(245, 175, 71, 0.8);
 }
 
+
+.contact a.reservation-ref {
+	margin: 15px 30px;
+}
+
 .reservation-ref {
+	text-decoration: none;
 	cursor: pointer;
 	display: block;
 	font-size: 15px;
 	text-align: center;
-	margin: 15px 30px;
-	padding: 10px 15px;
+	padding: 8px 12px;
 	border: 1px solid rgba(245, 175, 71, 0.8);
 	color: rgb(241, 238, 238);
 	opacity: 0.9;
@@ -189,7 +194,7 @@ nav > a {
 	color: rgb(36, 33, 33);
 }
 
-#specialties > h2, p {
+#specialties > h2, #specialties > p {
 	text-align: center;
 }
  
@@ -199,10 +204,12 @@ nav > a {
  }
  
  #specialties a{
+	position: relative;
 	display: block;
 	margin-left: 20px;
 	text-decoration: none;
-	opacity: 0.9;
+	opacity: 1;
+	overflow: hidden;
 	transition: all .1s linear;
  }
 
@@ -210,6 +217,36 @@ nav > a {
 	 transform: translate(4px, -4px);
 	 opacity: 1;
  }
+
+ #specialties a > div {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(194, 99, 99);
+	opacity: 0;
+	transition: opacity 0.4s;
+ }
+
+ #specialties a > div > span {
+	 /* Треба було анулювати властивості інших параграфів а цій секції */
+	top: 50%;
+	left: 50%;
+	color: white;
+	position: relative;
+	display: inline-block;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	font-weight: bold;
+ }
+
+
+ #specialties a:hover div{
+	opacity: 0.8;
+	transform: translateY(100%);
+	transition: transform 0.4s;
+}
 
 #specialties img {
 	display: block;
@@ -219,9 +256,10 @@ nav > a {
 
  #specialties ul p {
 	margin-top: 0;
-	background-color: rgb(241, 238, 238);
-	padding: 10px 5px;
+	background-color: white;
+	padding: 15px 5px;
 	color: rgb(194, 99, 99);
+	font-size: 12px;
  }
  
 
@@ -236,7 +274,7 @@ nav > a {
 #menu > h2 {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 35px;
-	color: rgba(200, 100, 70, 1);
+	color: rgba(245, 175, 71, 0.8);
 }
 
 #menu > p {
@@ -251,10 +289,11 @@ nav > a {
 
  #menu table {
 	border: 1px solid rgb(241, 238, 238);
+	width: 100%;
  }
 
 .course-type h3 {
-	color: rgba(200, 100, 70, 1);
+	color: rgba(245, 175, 71, 0.8);
 	font-size: 25px;
 	margin: 30px 0;
 }
@@ -265,12 +304,37 @@ nav > a {
 
 .description > div{
 	display: flex;
+	padding: 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.description > div > div {
+	text-align: left;
+}
+
+.description  h4, .description > div > div > p {
+	color: rgb(241, 238, 238);
+	margin: 5px 0;
+}
+
+.description h4 {
+	font-size: 13px;
+}
+
+.description > div > div > p {
+	font-size: 10px;
+}
+
+.price {
+	color: rgba(245, 175, 71, 0.8);
+	font-size: 25px;
 }
 
 .menu-ref {
 	cursor: pointer;
 	padding: 10px 25px;
-	background-color: rgba(200, 100, 70, 1);
+	background-color: rgba(245, 175, 71, 0.8);
 	color: rgb(36, 33, 33);
 	transition: all .2s linear;
 	opacity: 0.9;
@@ -279,16 +343,92 @@ nav > a {
 .menu-ref:hover {
 	opacity: 1;
 	background-color: rgb(241, 238, 238);
-	color:rgba(200, 100, 70, 1);
+}
+
+/* Booking */
+#booking {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgb(100, 98, 98);
+	text-align: center;
+}
+
+#booking > h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 35px;
+	color:rgb(241, 238, 238);
+}
+
+#booking > p {
+	margin: 30px 0;
+	color: rgb(36, 33, 33);
+}
+
+#booking-form > div {
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+#booking-form > div > div {
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+#booking-form p {
+	margin-bottom: 10px;
+	color: rgb(241, 238, 238);
+	font-size: 18px;
 }
 
 
- #booking {
-	text-align: center;
-	background-color: rgba(20, 190, 100, 1);
+#booking-form select {
+	padding: 12px;
 }
 
-#booking #booking-form {
+
+/* Footer */
+footer {
+	background-color: rgb(20, 5, 44);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+footer > div {
 	text-align: center;
-	background-color: rgba(0, 200, 0, 1);
+}
+
+footer > div > div {
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+	width: 30%;
+}
+
+footer h3 {
+	margin-bottom: 10px;
+	color: rgb(241, 238, 238);
+	font-size: 18px;
+}
+
+footer > div p {
+	margin: 15px 0;
+	color: rgb(241, 238, 238);
+	font-size: 10px;
+}
+
+footer div > a{
+	width: 60%;
+}
+
+
+footer > p{
+	color: rgba(245, 175, 71, 1);
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+footer li {
+	display: inline-block;
+	width: 20%;
 }
