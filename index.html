@@ -1,0 +1,273 @@
+
+<!--	
+		HTML5 - це оновлення мови HTML, в якому з'явилися так звані семантичні елементи
+		семантичний елемент чітко описує своє значення як для браузера, так і для розробника
+		<!DOCTYPE html> означає, що браузер інтерпретуватиме наступний код за специфікацією HTML5
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 Structure Example</title>
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- styles -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+
+		<!--	елемент <header> - це контейнер для вступного вмісту або набору навігаційних посилань.
+				зазвичай містить:
+				- логотип
+				- один або кілька заголовків (<h1> - <h6>)
+				- навігація
+				ви можете мати кілька елементів <header> в одному документі HTML
+				! однак наступний після основного <header> має розміщуватися всередині елементів <article> або <section> 
+		-->
+		<header>
+
+			<!--	ви можете сміливо використовувати несемантичні "обгортки" <div> всередині семантичних елементів 
+					для кращого контролю з боку CSS
+			-->
+			<div>
+
+				<!--	логотип прийнято класти всередину заголовку першого порядку, адже він містить все, що можна сказати про бренд/компанію
+				-->
+				<h1>
+					<a href="index.html">
+						<img src="img/logo.png" alt="NU is a blog about sustainable floristry">
+					</a>
+				</h1>
+
+				<!--	елемент <nav> визначає основний блок навігаційних посилань по всьому проєкту
+						! у проєкті не повинно бути більше одного елемента <nav> - він дублюється на всіх внутрішніх сторінках !
+				-->
+				<nav>
+					<a href="floristry.html">Floristry</a>
+					<a href="sustainable.html">Sustainable floristry</a>
+					<a href="dry.html">Dry flowers</a>
+				</nav>
+
+			</div>
+
+			<!--	елемент <figure> визначає самостійний вміст, такий як ілюстрації, схеми, фотографії тощо
+					елемент <figcaption> визначає підпис для елемента <figure> та може бути розміщений як перший або як останній дочірній елемент елемента <figure>
+					елемент <img> визначає фактичне зображення / ілюстрацію
+			-->
+			<figure>
+				<img src="img/banner.jpg" alt="We do sustainable floristry">
+				<figcaption>We do sustainable floristry</figcaption>
+			</figure>
+
+		</header>
+
+		<!--	елемент <main> визначає основний вміст документа
+				вміст елемента <main> повинен бути унікальним для документа і не повинен містити контент бічних панелей, навігаційні посилання, інформацію про авторські права, логотип, форми пошуку тощо
+				! у документі не повинно бути більше одного елемента <main> !
+				! елемент <main> НЕ повинен бути нащадком елемента <article>, <aside>, <footer>, <header> або <nav> !
+		-->
+		<main>
+
+			<!--	ви можете сміливо використовувати несемантичні "обгортки" <div> всередині семантичних елементів 
+					для кращого контролю з боку CSS
+			-->
+			<div>
+
+				<div>
+
+					<!--	елемент <article> визначає незалежний, самостійний вміст 
+							cтаття повинна мати сенс сама по собі, і має бути можливість розповсюдити її незалежно від решти сайту 
+							! може містити один або кілька заголовків (<h1> - <h6>), а також елементи <header> та <footer> !
+					-->
+					<article>
+						<header>
+							<h1>Ethical & Sustainable Floristry</h1>
+							<h2>What do we mean when we say we practice Ethical & Sustainable Floristry?</h2>
+						</header>
+						
+						<!--	елемент <details> використовується для створення інтерактивного віджету (без залучення JS), 
+								який користувач може відкривати та закривати
+								елемент <details> працює як "акордеон" і ховає/показує будь-які додаткові дані по кліку 
+								! помістити всередину тегу <details> можна будь-який вміст !
+
+								! елемент <summary> використовується разом із <details> для вказівки видимого заголовка для деталей !
+						-->
+						<details>
+							<summary>We hear the words ‘sustainable’ and ‘ethically sourced’ all the time, but how many of us really stop to think about what this actually means when purchasing fresh flowers?  Most people wouldn’t think of a beautiful bouquet of fresh flowers in terms of being ethically sourced or environmentally sustainable. ...</summary>
+							<p>They grow in the ground they are natural and compostable - what’s the problem? Well there are several environmental and ethical issues to be considered when purchasing your fresh flowers. 
+							
+							<!--	елемент <mark> визначає текст, який слід виділити, наче маркером -->
+							<mark>Choosing Stones Corner Flower Shop</mark>
+
+							means you have chosen a florist that has made a considered decision to provide you with the freshest flowers while causing the least possible harm to our environment.</p>
+						</details>
+
+						<!--	елемент <footer> визначає нижній колонтитул документа або розділу і зазвичай містить:
+								інформацію про авторство, інформація про авторські права, контактну інформацію, другорядну навігацію
+								! в одному документі може бути кілька елементів <footer> !
+						-->
+						<footer>
+							by <a href="miller-articles.html">Iren Miller</a>
+						</footer>
+
+					</article>
+
+					<article>
+
+						<!--	елемент <hgroup> використовується для групування елементів заголовка	-->
+						<hgroup>
+							<h1>We do not use Floral Foam</h1>
+							<h2>Why is floral foam so bad for us and the environment?</h2>
+						</hgroup>
+
+						<!--	елемент <video> використовується для вбудовування відеовмісту в документ HTML, не вимагаючи додаткових плагінів
+								! підтримка елемента <video> залежить від браузера !
+								! на сьогодні існує три основних відеоформати, які підтримуються для відеоелемента: MP4, Ogg та WebM !
+						-->
+						<video controls>
+
+							<!--	aтрибут controls додає візуальні та звукові елементи керування, такі як відтворення, пауза та гучність
+									елемент <source> дозволяє вказати альтернативні відеофайли, які браузер може вибрати
+									! браузер використовуватиме перший розпізнаний формат !
+									! текст між тегами <video> та </video> відображатиметься лише у браузерах, які не підтримують елемент <video> !
+							-->
+						    <source src="https://videos.files.wordpress.com/ycrDwKoS/spring-video_hd.mp4" type="video/mp4">
+						    Your browser does not support the audio element.
+						</video>
+
+
+						<!--	елемент <audio> використовується для відтворення аудіофайлу на веб-сторінці		
+								aтрибут controls додає візуальні та звукові елементи керування, такі як відтворення, пауза та гучність
+								елемент <source> дозволяє вказати альтернативні аудіофайли, які браузер може вибрати
+								! браузер використовуватиме перший розпізнаний формат !
+								! текст між тегами <audio> та </audio> відображатиметься лише у браузерах, які не підтримують елемент <audio> !
+						-->
+						<audio controls>
+							<source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+
+					</article>
+
+					</div>
+
+					<!--	елемент <aside> визначає вміст, опосередкований, але пов’язаний з тим, в якому його розміщено
+						! вміст <aside> найчастіше розміщується як бічна панель у документі !
+					-->
+					<aside>
+
+						<!--	HTML5 пропонує ряд нових типів для поля вводу
+								докладніше тут: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
+						-->
+						<input type="search" name="search">
+
+						<!--	не забувате, що можна поєднувати семантичні та несемантичні елементи
+								елемент <ul> якнайкраще підходить для структурування списків
+						-->
+						<ul>
+							<li>
+								Categories
+							</li>
+							<li>
+								<a href="ecofloristry.html">Ecofloristry</a>
+							</li>
+							<li>
+								<a href="sustainability.html">Sustainability</a>
+							</li>
+							<li>
+								<a href="floristry.html">Floristry</a>
+							</li>
+						</ul>
+
+						<ul>
+							<li>
+								Popular posts
+							</li>
+							<li>
+								<article>
+
+									<!--	не забувате, що для попередження помилок в силу недбалості контент-менеджерів 
+											(які вставляють ДУЖЕ великі картирки, пишуть забагато тексту, тощо)
+											варто "огортати" картинки елементами <div>, назначати таким "обгорткам" 
+											параметри ширини, висоти та overflow: hidden;
+											елемент <img> в такій конструкції робиться блочним та фіксується параметр width: 100%; або height: 100%;
+									-->
+									<div>
+										<img src="img/post-1.jpg" alt="Zero Waste">
+									</div>
+									<div>
+										<h1>Zero Waste</h1>
+										<p>by <a href="miller-articles.html">Iren Miller</a></p>
+									</div>
+
+								</article>
+							</li>
+							<li>
+								<article>
+									<div>
+										<img src="img/post-2.jpg" alt="Floral Foam">
+									</div>
+									<div>
+										<h1>Floral Foam</h1>
+										<p>by <a href="miller-articles.html">Alen Alex</a></p>
+									</div>
+
+								</article>
+							</li>
+						</ul>
+						
+					</aside>
+
+			</div>
+
+			<!--	елемент <section> визначає розділ у документі
+					! може містити один або кілька заголовків (<h1> - <h6>), а також елементи <header> та <footer> !
+			-->
+			<section>
+				<h1> Reduce, Reuse, Recycle</h1>
+				<figure>
+					<img src="img/section.jpg" alt="Reduce, Reuse, Recycle">
+					<figcaption>We champion Zero Waste and the three R’s - Reduce, Reuse, Recycle. The flower industry generates ton’s of waste every year and a lot of this waste is non-biodegradable and unnecessary – including single use plastic wrapping, plastic containers and trinkets as well as synthetic based ribbons.</figcaption>
+				</figure>
+			</section>
+
+		</main>
+
+		<!--	елемент <footer> визначає нижній колонтитул документа або розділу і зазвичай містить:
+				інформацію про авторство, інформація про авторські права, контактну інформацію, другорядну навігацію
+				в одному документі може бути кілька елементів <footer>
+				! однак наступний після основного <footer> має розміщуватися всередині елементів <article> або <section> 
+		-->
+		<footer>
+
+			<!--	такі конструкції як &copy; називаються HTML Symbols
+					багато математичних, технічних та валютних символів відсутні на звичайній клавіатурі
+					щоб додати такі символи на сторінку HTML, ви можете використовувати ім'я сутності або номер сутності для символа
+					список HTML Symbols тут: https://www.w3schools.com/html/html_symbols.asp
+			-->
+			<p>&copy; Stones Corner Flower Shop</p>
+			
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/">FB</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/">IN</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/">TW</a>
+				</li>
+			</ul>
+
+		</footer>
+
+
+
+	</body>
+</html>
