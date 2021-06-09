@@ -1,0 +1,274 @@
+@font-face {
+	font-family: "Gang of Three";
+	src: url("go3v2.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+header {
+	padding: 25%;
+}
+
+/* Header styles */
+header {
+	position: relative;
+	background-color: rgb(100, 98, 98);
+	padding-top: 10px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header::after {
+	position: absolute;
+	content: "";
+	width: 50%;
+	border-bottom: 1px rgb(241, 238, 238) solid;
+	margin-top: 40px;
+}
+
+h1 > a {
+	text-decoration: none;
+	font-family: "Gang of Three";
+	font-weight: normal;
+	line-height: 1.2;
+	color: white;
+	font-size: 36px;
+}
+
+nav > a {
+	margin-right: 8px;
+	text-decoration: none;
+	color: rgb(241, 238, 238);
+	opacity: 0.9;
+	transition: all .4s ease;
+}
+
+ nav > a:hover {
+	opacity: 1;
+	color: rgb(36, 33, 33);
+}
+
+/* Sidebar section */
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 150px;
+    position: fixed;
+    margin-left: 900px;
+    top: 0;
+    right: -150px;
+    bottom: 0;
+    z-index: 1;  
+    display: blocked;
+  
+    -moz-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+}
+
+.sidebar h2 {
+    font-family: 'Kaushan Script', cursive;
+	  font-size: 30px;
+	  color: rgba(245, 175, 71, 0.8);
+	  margin: 5% 0;
+    text-align: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+.sidebar ul {
+  line-height: 550%;
+  text-decoration: none;
+}
+
+.sidebar li {
+  list-style: none;
+  font-family: 'Kaushan Script', cursive;
+	font-size: 30px;
+  color: rgba(245, 175, 71, 0.8);
+	margin: 30% 0;
+  text-align: center;
+}
+
+
+/* Functional sidebar section */
+
+.wrapper {
+    background-color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+input[type=checkbox] {
+   display: none;
+}
+
+input:checked ~ .wrapper { 
+    right: 150px;
+}
+
+input:checked ~ .sidebar {
+    right: 0;
+}
+
+input:checked ~ label {
+    right: 150px;
+}
+
+label {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    background-color: #11ffee00;
+    
+    -moz-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+}
+
+label div {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 6px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;  
+  z-index: 1;  
+  -webkit-transform-origin: 4px 0px;  
+      -ms-transform-origin: 4px 0px;  
+          transform-origin: 4px 0px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Intro section */
+#intro {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgb(100, 98, 98);
+ }
+
+#intro > div {
+	padding-left: 40%;
+}
+
+#intro > h1 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 100px;
+	color: rgba(245, 175, 71, 0.8);
+	margin: 5% 0;
+  text-align: center;
+}
+
+/*Dessert section */
+
+#dessert {
+	padding-top: 0;
+	padding-bottom: 100px;
+	background-color: rgb(100, 87, 75);
+}
+
+.ban {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+  height: 300px;
+  opacity: 0.25;
+  display: block;
+}
+
+.banner {
+  position: relative;
+}
+
+#center {
+  color: rgba(255, 229, 255, 0.8);
+  font-family: Arial;
+  font-size: 100px;
+	text-size-adjust: 80%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  object-fit: cover; 
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+#dessert > p {
+	margin: 30px 0;
+	color: rgb(36, 33, 33);
+}
+ 
+#dessert ul {
+	display: flex;
+  max-width: 100%;
+	justify-content: space-between;
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+ }
+
+#dessert li {
+  list-style-type: none;
+  float: left;
+  position: relative;
+  padding-right: 10px;
+}
+ 
+#dessert .imagebox{
+	position: relative;
+	display: block;
+	margin-left: 0;
+	text-decoration: none;
+	opacity: 1;
+	overflow: hidden;
+	transition: all .1s linear;
+ }
+
+#dessert .imagebox:hover {
+	 transform: translate(4px, -4px);
+	 opacity: 1;
+ }
+
+#dessert .imagebox > div {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	opacity: 0;
+	transition: opacity 0.4s;
+ }
+
+ #dessert .imagebox:hover .caption{
+	opacity: 0.8;
+	transform: translateY(96%);
+	transition: transform 0.4s;
+}
+
+#dessert ul img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+  height: 300px;
+  opacity: 0.75;
+  display: block;
+ }
+
+ #dessert ul p {
+	margin-top: 0;
+	background-color: white;
+	padding: 15px 5px;
+	color: rgb(194, 99, 99);
+	font-size: 15px;
+ }
